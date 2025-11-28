@@ -100,7 +100,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [1200, 344.0]
+    coordinate: [1360, 368.0]
     rotation: 0
     state: enabled
 - name: blocks_complex_to_mag_squared_0
@@ -131,7 +131,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [632, 400.0]
+    coordinate: [632, 432.0]
     rotation: 0
     state: enabled
 - name: blocks_delay_0
@@ -151,7 +151,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [376, 360.0]
+    coordinate: [504, 324.0]
     rotation: 0
     state: enabled
 - name: blocks_delay_1
@@ -199,7 +199,7 @@ blocks:
     alias: ''
     begin_tag: pmt.PMT_NIL
     comment: ''
-    file: C:\Users\pedro\Desktop\FEUP\CDIG\Wifi_Project_Baseband_recordings\Wifi_Project_Baseband_recordings\Sample3_20MHz_Channel100.bin
+    file: /home/pedro/gnuradio_sdr/Sample3_20MHz_Channel100.bin
     length: '0'
     maxoutbuf: '0'
     minoutbuf: '0'
@@ -212,62 +212,6 @@ blocks:
     bus_source: false
     bus_structure: null
     coordinate: [40, 264.0]
-    rotation: 0
-    state: enabled
-- name: blocks_float_to_complex_0
-  id: blocks_float_to_complex
-  parameters:
-    affinity: ''
-    alias: ''
-    comment: ''
-    maxoutbuf: '0'
-    minoutbuf: '0'
-    vlen: '1'
-  states:
-    bus_sink: false
-    bus_source: false
-    bus_structure: null
-    coordinate: [1328, 472.0]
-    rotation: 180
-    state: enabled
-- name: blocks_moving_average_xx_0
-  id: blocks_moving_average_xx
-  parameters:
-    affinity: ''
-    alias: ''
-    comment: ''
-    length: '48'
-    max_iter: '4000'
-    maxoutbuf: '0'
-    minoutbuf: '0'
-    scale: '1'
-    type: complex
-    vlen: '1'
-  states:
-    bus_sink: false
-    bus_source: false
-    bus_structure: null
-    coordinate: [1032, 252.0]
-    rotation: 0
-    state: enabled
-- name: blocks_moving_average_xx_1
-  id: blocks_moving_average_xx
-  parameters:
-    affinity: ''
-    alias: ''
-    comment: ''
-    length: '48'
-    max_iter: '4000'
-    maxoutbuf: '0'
-    minoutbuf: '0'
-    scale: '1'
-    type: float
-    vlen: '1'
-  states:
-    bus_sink: false
-    bus_source: false
-    bus_structure: null
-    coordinate: [1032, 124.0]
     rotation: 0
     state: enabled
 - name: blocks_multiply_xx_0
@@ -327,13 +271,51 @@ blocks:
     coordinate: [144, 496.0]
     rotation: 180
     state: enabled
+- name: fir_filter_xxx_0
+  id: fir_filter_xxx
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    decim: '1'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    samp_delay: '0'
+    taps: '[1]*window_size'
+    type: fff
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1176, 172.0]
+    rotation: 0
+    state: enabled
+- name: fir_filter_xxx_1
+  id: fir_filter_xxx
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    decim: '1'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    samp_delay: '0'
+    taps: '[1]*window_size'
+    type: ccc
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1056, 284.0]
+    rotation: 0
+    state: enabled
 - name: ieee802_11_decode_mac_0
   id: ieee802_11_decode_mac
   parameters:
     affinity: ''
     alias: ''
     comment: ''
-    debug: 'False'
+    debug: 'True'
     log: 'False'
     maxoutbuf: '0'
     minoutbuf: '0'
@@ -352,8 +334,8 @@ blocks:
     alias: ''
     bw: 20e6
     comment: ''
-    debug: 'False'
-    freq: 5.22e9
+    debug: 'True'
+    freq: 5.5e9
     log: 'False'
     maxoutbuf: '0'
     minoutbuf: '0'
@@ -391,7 +373,7 @@ blocks:
     log: 'False'
     maxoutbuf: '0'
     minoutbuf: '0'
-    sync_length: '240'
+    sync_length: '320'
   states:
     bus_sink: false
     bus_source: false
@@ -410,7 +392,7 @@ blocks:
     maxoutbuf: '0'
     min_plateau: '2'
     minoutbuf: '0'
-    threshold: '0.8'
+    threshold: '0.5'
   states:
     bus_sink: false
     bus_source: false
@@ -430,7 +412,7 @@ blocks:
     mtu: '10000'
     port: '12345'
     tcp_no_delay: 'False'
-    type: UDP_SERVER
+    type: UDP_CLIENT
   states:
     bus_sink: false
     bus_source: false
@@ -453,7 +435,7 @@ blocks:
     alpha7: '1.0'
     alpha8: '1.0'
     alpha9: '1.0'
-    autoscale: 'False'
+    autoscale: 'True'
     axislabels: 'True'
     color1: blue
     color10: dark blue
@@ -512,7 +494,7 @@ blocks:
     tr_mode: qtgui.TRIG_MODE_FREE
     tr_slope: qtgui.TRIG_SLOPE_POS
     tr_tag: '""'
-    type: complex
+    type: float
     update_time: '0.10'
     width1: '1'
     width10: '1'
@@ -532,28 +514,28 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [672, 20.0]
-    rotation: 0
+    coordinate: [1516.0, 624]
+    rotation: 270
     state: disabled
 
 connections:
 - [blocks_complex_to_mag_0, '0', blocks_divide_xx_0, '0']
-- [blocks_complex_to_mag_squared_0, '0', blocks_moving_average_xx_1, '0']
+- [blocks_complex_to_mag_squared_0, '0', fir_filter_xxx_0, '0']
 - [blocks_conjugate_cc_0, '0', blocks_multiply_xx_0, '1']
 - [blocks_delay_0, '0', blocks_conjugate_cc_0, '0']
 - [blocks_delay_0, '0', ieee802_11_sync_short_0, '0']
 - [blocks_delay_1, '0', ieee802_11_sync_long_0, '1']
-- [blocks_divide_xx_0, '0', blocks_float_to_complex_0, '0']
 - [blocks_divide_xx_0, '0', ieee802_11_sync_short_0, '2']
+- [blocks_divide_xx_0, '0', qtgui_time_sink_x_0, '0']
 - [blocks_file_source_0, '0', blocks_complex_to_mag_squared_0, '0']
 - [blocks_file_source_0, '0', blocks_delay_0, '0']
 - [blocks_file_source_0, '0', blocks_multiply_xx_0, '0']
-- [blocks_float_to_complex_0, '0', ieee802_11_sync_short_0, '1']
-- [blocks_moving_average_xx_0, '0', blocks_complex_to_mag_0, '0']
-- [blocks_moving_average_xx_1, '0', blocks_divide_xx_0, '1']
-- [blocks_multiply_xx_0, '0', blocks_moving_average_xx_0, '0']
+- [blocks_multiply_xx_0, '0', fir_filter_xxx_1, '0']
 - [blocks_stream_to_vector_0, '0', fft_vxx_1, '0']
 - [fft_vxx_1, '0', ieee802_11_frame_equalizer_0, '0']
+- [fir_filter_xxx_0, '0', blocks_divide_xx_0, '1']
+- [fir_filter_xxx_1, '0', blocks_complex_to_mag_0, '0']
+- [fir_filter_xxx_1, '0', ieee802_11_sync_short_0, '1']
 - [ieee802_11_decode_mac_0, out, ieee802_11_parse_mac_0, in]
 - [ieee802_11_frame_equalizer_0, '0', ieee802_11_decode_mac_0, '0']
 - [ieee802_11_parse_mac_0, out, network_socket_pdu_0, pdus]
@@ -563,4 +545,4 @@ connections:
 
 metadata:
   file_format: 1
-  grc_version: 3.10.12.0
+  grc_version: 3.10.9.2
